@@ -3,7 +3,7 @@ use solana_program::pubkey::Pubkey;
 use std::str::FromStr;
 // This is your program's public key and it will update
 // automatically when you build the project.
-declare_id!("9abegPWEJVgaJ5kmNiDCfh93iMCovugQY4ToznvXDkWV");
+declare_id!("7yqvgTivqqjQYFLrautXZ336TZF9uCr2y7ciKLjmha7V");
 
 #[error_code]
 pub enum MyError {
@@ -31,7 +31,7 @@ mod hello_anchor {
             return Err(MyError::InvalidReceiverAddress.into());
         }
 
-        let raddr: Pubkey = Pubkey::from_str("HdwzqmZbNVanLU56sKmgwdWjgZReHf9ESuD7GfGUkErc")
+        let raddr: Pubkey = Pubkey::from_str("2zjstJ8iXTKKPi5EBM6G4qbtcfqbmWeXEqeVCNHrpZ25")
             .map_err(|_| MyError::InvalidReceiverAddress)?;
 
         let buyer = &mut ctx.accounts.buyer;
@@ -74,7 +74,7 @@ mod hello_anchor {
             return Err(MyError::InvalidReceiverAddress.into());
         }
 
-        let raddr: Pubkey = Pubkey::from_str("HdwzqmZbNVanLU56sKmgwdWjgZReHf9ESuD7GfGUkErc")
+        let raddr: Pubkey = Pubkey::from_str("2zjstJ8iXTKKPi5EBM6G4qbtcfqbmWeXEqeVCNHrpZ25")
             .map_err(|_| MyError::InvalidReceiverAddress)?;
 
         let buyer = &mut ctx.accounts.buyer;
@@ -92,7 +92,7 @@ mod hello_anchor {
             cprice,
         );
 
-        msg!("course_price {:?}", cprice);
+        msg!("insure_price {:?}", cprice);
 
         msg!(" key here, {:?}", &ctx.accounts.user.key());
 
